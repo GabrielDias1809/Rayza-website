@@ -1,0 +1,46 @@
+.section {
+  height: auto;
+  margin-top: 15vh;
+}
+.sectionTitle {
+  color: #2c373f;
+  font-family: 'Outfit', sans-serif;
+  font-size: 3vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4vh; /* 120% */
+  text-transform: capitalize;
+  margin-top: 4vh;
+}
+.line {
+  border-bottom: 2px solid #63bcee;
+  width: 15vh;
+}
+.howeare {
+  color: #9f9f9f;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29.25px; /* 195% */
+  margin-bottom: 8vh;
+  margin-top: 3vh;
+}
+.signupButton {
+  font-family: 'Urbanist', sans-serif;
+  text-transform: capitalize;
+  font-size: 2vh;
+  font-weight: 700;
+  background-color: #fb4a8d;
+  color: #fff;
+  border-style: none;
+  border-radius: 6px;
+  width: 21vh;
+  height: 5.8vh;
+  margin-right: 2rem;
+  margin-top: 6.5vh;
+}
+.students {
+  width: 50%;
+  height: auto;
+}

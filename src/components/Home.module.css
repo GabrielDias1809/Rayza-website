@@ -1,0 +1,65 @@
+.section {
+  background-image: url('../imgs/homeBanner.png');
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir completamente a seção */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  background-position: center; /* Centraliza a imagem na seção */
+  min-height: 100vh;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+.welcome {
+  color: #fb4a8d;
+  font-family: Water Brush;
+  font-size: 11vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13vh; /* 116.822% */
+  letter-spacing: -2.141px;
+  text-transform: capitalize;
+  margin-top: 11rem;
+  margin-bottom: 0;
+}
+.realEnglish {
+  color: #2a254d;
+  font-family: Urbanist;
+  font-size: 7.2vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 7.2vh; /* 100% */
+  letter-spacing: -1.4px;
+  text-transform: capitalize;
+}
+.obs {
+  color: #2a254d;
+  font-family: Urbanist;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3vh; /* 150% */
+  margin-top: 4vh;
+}
+.signupButton {
+  font-family: 'Outfit', sans-serif;
+  text-transform: capitalize;
+  font-size: 3.4vh;
+  font-weight: 600;
+  background: #26b6c6bf;
+  color: #fff;
+  border-style: none;
+  border-radius: 10px;
+  width: 43vh;
+  height: 10vh;
+  margin-top: 67vh;
+  transition: 0.3s;
+}
+.signupButton:hover {
+  background: #26b6c6;
+  transition: 0.3s;
+}
+.imgHome {
+  width: 80%;
+  height: auto;
+  margin-top: 23vh;
+  z-index: 1;
+}

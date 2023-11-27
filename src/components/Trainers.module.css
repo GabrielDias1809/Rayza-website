@@ -1,0 +1,20 @@
+.section {
+  margin-top: 10vh;
+  height: auto;
+}
+.sectionTitle {
+  color: #2c373f;
+  font-family: 'Outfit', sans-serif;
+  font-size: 3vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4vh; /* 120% */
+  text-transform: capitalize;
+}
+.line {
+  border-bottom: 2px solid #63bcee;
+  width: 13%;
+}
+.trainers {
+  width: 37vh;
+}

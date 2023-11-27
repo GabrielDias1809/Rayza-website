@@ -1,0 +1,40 @@
+.section {
+  background-color: #003a51;
+  width: 100%;
+  height: auto;
+  position: relative;
+  bottom: 0;
+}
+.footer {
+  background-color: #002939;
+  height: 8vh;
+  border-top: 10px solid #002535;
+}
+.mainLogo {
+  width: 100%;
+  max-width: 15dvh; /* Defina o tamanho máximo conforme necessário */
+}
+.svg {
+  width: 100%;
+  max-width: 50px; /* Defina o tamanho máximo conforme necessário */
+}
+.information {
+  width: 50%;
+  color: #ffffff91;
+  font-family: Outfit;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3vh; /* 150% */
+  margin-top: 3vh;
+  text-decoration: none;
+}
+.subtitle {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 3vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.6vh; /* 65% */
+  text-transform: capitalize;
+}
