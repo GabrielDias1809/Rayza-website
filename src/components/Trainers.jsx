@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Trainers.module.css';
-import trainer1 from '../imgs/team1.png';
-import trainer2 from '../imgs/team2.png';
-import trainer3 from '../imgs/team3.png';
+import trainer1 from '../imgs/team1.webp';
+import trainer2 from '../imgs/team2.webp';
+import trainer3 from '../imgs/team3.webp';
 
 const Trainers = () => {
   return (

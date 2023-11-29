@@ -1,11 +1,7 @@
 // Trips.js
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import styles from './Trips.module.css';
-import trip1 from '../imgs/trip1.png';
-import trip2 from '../imgs/trip2.png';
+import trip1 from '../imgs/trip1.webp';
 
 const Trips = () => {
   // const [data, setData] = React.useState(null);

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './HoWeAre.module.css';
-import p1 from '../imgs/howearePhoto.png';
-import p2 from '../imgs/howearePhoto_2.png';
+import p1 from '../imgs/howearePhoto.webp';
+import p2 from '../imgs/howearePhoto_2.webp';
 
 const HoWeAre = () => {
   return (
