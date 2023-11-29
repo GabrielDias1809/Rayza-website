@@ -19,7 +19,7 @@ const Footer = () => {
               <p className={`${styles.information}`}>seuemail@gmail.com</p>
               <p className={`${styles.information}`}>21 96906-8241</p>
               <p className=" mt-4">
-                <a href="#">
+                <a>
                   <FontAwesomeIcon
                     icon={faWhatsapp}
                     style={{ color: '#949fb5', marginLeft: '.5rem' }}
@@ -27,14 +27,14 @@ const Footer = () => {
                   />
                 </a>
 
-                <a href="#">
+                <a>
                   <FontAwesomeIcon
                     icon={faInstagram}
                     style={{ color: '#949fb5', marginLeft: '.5rem' }}
                     size="xl"
                   />
                 </a>
-                <a href="#">
+                <a>
                   <FontAwesomeIcon
                     icon={faFacebook}
                     style={{ color: '#949fb5', marginLeft: '.5rem' }}
@@ -73,11 +73,6 @@ const Footer = () => {
                 <a href="#trips" className="nav-link">
                   Trips
                 </a>
-              </p>
-              <p className={styles.information}>
-                <Link className="nav-link" to="system">
-                  System
-                </Link>
               </p>
             </div>
             <div className="col-md-6 mt-5">

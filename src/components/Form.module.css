@@ -1,0 +1,22 @@
+.section {
+  margin-top: 15vh;
+}
+.label {
+  font-family: Urbanist, sans-serif;
+  font-weight: 700;
+  font-size: 2vh;
+}
+.buttonForm {
+  width: 10vh;
+  margin-top: 2vh;
+  border: 0;
+  background-color: #00adef;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 100%;
+  height: 4vh;
+  color: white;
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 2vh;
+}

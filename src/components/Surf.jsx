@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Surf.module.css';
+import { Link } from 'react-router-dom';
 
 const Surf = () => {
   return (
@@ -15,7 +16,9 @@ const Surf = () => {
         </p>
       </div>
       <div className="d-flex justify-content-center">
-        <button className={styles.signUpButton}>Inscreva-se</button>
+        <Link to="/formulario" style={{ textDecoration: 'none' }}>
+          <button className={styles.signUpButton}>Inscreva-se</button>
+        </Link>
       </div>
     </section>
   );

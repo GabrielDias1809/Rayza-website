@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from './components/Header';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Form from './components/Form';
 import Page from './components/Page';
-import System from './components/System';
-import Listas from './components/Listas';
 
 function App() {
   return (
@@ -13,8 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Page />} />
-          <Route path="/system" element={<System />} />
-          <Route path="/listas" element={<Listas />} />
+          <Route path="/formulario" element={<Form />} />
         </Routes>
       </BrowserRouter>
     </>

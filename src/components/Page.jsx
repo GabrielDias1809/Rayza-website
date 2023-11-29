@@ -8,7 +8,6 @@ import Trainers from './Trainers';
 import Trips from './Trips';
 import Feedbacks from './Feedbacks';
 import Footer from './Footer';
-import System from './System';
 
 const Page = () => {
   return (

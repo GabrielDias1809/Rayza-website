@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from '../imgs/logo_centro.png';
 import styles from './Header.module.css';
-const Header = () => {
+import { Link } from 'react-router-dom';
+const Header = ({ formHeader }) => {
   // muda a cor do Header ao dar scroll
   const [fixed, setFixed] = React.useState(false);
   const [menu, setMenu] = React.useState(false);
@@ -90,36 +91,68 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#home">
-                Home
-              </a>
+              {formHeader ? (
+                <Link className="nav-link" aria-current="page" to="/">
+                  Home
+                </Link>
+              ) : (
+                <a className="nav-link" aria-current="page" href="#home">
+                  Home
+                </a>
+              )}
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#howeare">
-                Quem Somos
-              </a>
+              {formHeader ? (
+                <Link className="nav-link" aria-current="page" to="/">
+                  Quem Somos
+                </Link>
+              ) : (
+                <a className="nav-link" aria-current="page" href="#howeare">
+                  Quem Somos
+                </a>
+              )}
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#values">
-                Nosso Valores
-              </a>
+              {formHeader ? (
+                <Link className="nav-link" aria-current="page" to="/">
+                  Nossos Valores
+                </Link>
+              ) : (
+                <a className="nav-link" aria-current="page" href="#values">
+                  Nossos Valores
+                </a>
+              )}
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#trainers">
-                Nosso Time
-              </a>
+              {formHeader ? (
+                <Link className="nav-link" aria-current="page" to="/">
+                  Nosso time
+                </Link>
+              ) : (
+                <a className="nav-link" aria-current="page" href="#trainers">
+                  Nosso time
+                </a>
+              )}
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#trips">
-                Trips
-              </a>
+              {formHeader ? (
+                <Link className="nav-link" aria-current="page" to="/">
+                  Trips
+                </Link>
+              ) : (
+                <a className="nav-link" aria-current="page" href="#trips">
+                  Trips
+                </a>
+              )}
             </li>
           </ul>
           <ul className="nav-navbar me-auto mt-3">
             <li className="nav-item">
-              <button className={`${styles.signupButton}`}>
-                Pré-Matrícula
-              </button>
+              <Link to="/formulario">
+                <button className={`${styles.signupButton}`}>
+                  Pré-Matrícula
+                </button>
+              </Link>
             </li>
           </ul>
         </div>
