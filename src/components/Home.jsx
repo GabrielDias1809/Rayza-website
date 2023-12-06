@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <section id="home" className={styles.section}>
         <div className="container d-flex justify-content-center align-items-end">
-          <Link to="/formulario">
+          <Link to="/formulario" className={styles.signupButtonLink}>
             <button className={styles.signupButton}>Inscreva-se agora</button>
           </Link>
         </div>

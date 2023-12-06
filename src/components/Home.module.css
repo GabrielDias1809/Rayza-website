@@ -50,8 +50,10 @@
   border-radius: 10px;
   width: 43vh;
   height: 10vh;
-  margin-top: 67vh;
   transition: 0.3s;
+}
+.signupButtonLink {
+  margin-top: 67vh;
 }
 .signupButton:hover {
   background: #26b6c6;
