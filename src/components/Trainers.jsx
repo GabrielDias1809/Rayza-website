@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Trainers.module.css';
 import trainer1 from '../imgs/team1.webp';
 import trainer2 from '../imgs/team2.webp';

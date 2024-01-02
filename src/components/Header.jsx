@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../imgs/logo_centro.png';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line react/prop-types
 const Header = ({ formHeader }) => {
   // muda a cor do Header ao dar scroll
   const [fixed, setFixed] = React.useState(false);

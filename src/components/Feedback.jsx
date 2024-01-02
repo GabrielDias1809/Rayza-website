@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Feedback.module.css';
 import img from '../imgs/imagem.webp';
 import Stars from './Stars';

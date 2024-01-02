@@ -1,24 +1,8 @@
 // Trips.js
-import React from 'react';
 import styles from './Trips.module.css';
 import trip1 from '../imgs/trip1.webp';
 
 const Trips = () => {
-  // const [data, setData] = React.useState(null);
-
-  // React.useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const response = await fetch('http://localhost:3001/');
-  //       const json = await response.json();
-  //       setData(json);
-  //     } catch (error) {
-  //       console.error('Erro ao buscar dados:', error);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
   return (
     <section id="trips" className={`p-5 ${styles.section}`}>
       <div className={`container ${styles.valuesContainer}`}>
@@ -28,7 +12,6 @@ const Trips = () => {
         <div
           className={`row d-flex justify-content-center ${styles.cardContainer}`}
         >
-          {/* {data?.map((c) => ( */}
           <div
             className={`col-md-3 shadow p-3 mb-5 bg-white rounded mx-3 ${styles.card}`}
           >
@@ -43,7 +26,14 @@ const Trips = () => {
                 orci facilisis dui, ac aliquet lorem ante quis orci.
               </p>
             </div>
-            <button className={styles.signUpButton}>Compre Agora!</button>
+            <a
+              className={styles.buyLink}
+              target="_blank"
+              rel="noreferrer"
+              href={`https://api.whatsapp.com/send?phone=+5521969068241&text=Estou%20Interessado%20na%20Trip%20Lorem%20Ipsum%20Dolor`}
+            >
+              <button className={styles.signUpButton}>Compre Agora!</button>
+            </a>
           </div>
           <div
             className={`col-md-3 shadow p-3 mb-5 bg-white rounded mx-3 ${styles.card}`}
@@ -59,7 +49,14 @@ const Trips = () => {
                 orci facilisis dui, ac aliquet lorem ante quis orci.
               </p>
             </div>
-            <button className={styles.signUpButton}>Compre Agora!</button>
+            <a
+              className={styles.buyLink}
+              target="_blank"
+              rel="noreferrer"
+              href={`https://api.whatsapp.com/send?phone=+5521969068241&text=Estou%20Interessado%20na%20Trip%20Lorem%20Ipsum%20Dolor`}
+            >
+              <button className={styles.signUpButton}>Compre Agora!</button>
+            </a>
           </div>
           <div
             className={`col-md-3 shadow p-3 mb-5 bg-white rounded mx-3 ${styles.card}`}
@@ -75,9 +72,15 @@ const Trips = () => {
                 orci facilisis dui, ac aliquet lorem ante quis orci.
               </p>
             </div>
-            <button className={styles.signUpButton}>Compre Agora!</button>
+            <a
+              className={styles.buyLink}
+              target="_blank"
+              rel="noreferrer"
+              href={`https://api.whatsapp.com/send?phone=+5521969068241&text=Estou%20Interessado%20na%20Trip%20Lorem%20Ipsum%20Dolor`}
+            >
+              <button className={styles.signUpButton}>Compre Agora!</button>
+            </a>
           </div>
-          {/* ))} */}
         </div>
       </div>
     </section>

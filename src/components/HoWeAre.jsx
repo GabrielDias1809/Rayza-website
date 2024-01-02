@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './HoWeAre.module.css';
 import p1 from '../imgs/howearePhoto.webp';
 import p2 from '../imgs/howearePhoto_2.webp';
@@ -18,7 +17,7 @@ const HoWeAre = () => {
               inclusão social, consciência ecológica e saúde em um ambiente
               multidisciplinar, agradável e acolhedor. Atendemos dos alunos
               iniciantes, sem nenhuma experiência, até surfistas avançados que
-              buscam mais evoluçã
+              buscam mais evolução
             </p>
           </div>
           <div className="col-md-6 d-flex">

@@ -1,13 +1,13 @@
-import React from 'react';
 import Header from './Header';
 import Home from './Home';
 import HoWeAre from './HoWeAre';
 import Values from './Values';
 import Surf from './Surf';
-import Trainers from './Trainers';
-import Trips from './Trips';
+// import Trainers from './Trainers';
+// import Trips from './Trips';
 import Feedbacks from './Feedbacks';
 import Footer from './Footer';
+import InstaFeed from './instaFeed';
 
 const Page = () => {
   return (
@@ -18,8 +18,9 @@ const Page = () => {
       <Feedbacks />
       <Surf />
       <Values />
-      <Trainers />
-      <Trips />
+      <InstaFeed />
+      {/* <Trainers /> */}
+      {/* <Trips /> */}
       <Footer />
     </>
   );
