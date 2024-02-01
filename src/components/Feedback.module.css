@@ -12,8 +12,9 @@
   padding-left: 0;
 }
 .depoiment {
-  width: 31vh;
-  height: 35vh;
+  width: 35vh;
+  height: 38vh;
+  border-radius: 15px;
 }
 .description {
   color: #697585;

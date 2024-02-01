@@ -1,12 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
-import logo from '../imgs/logo_centro.png';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -14,34 +6,8 @@ const Footer = () => {
       <section className={styles.section}>
         <div className="container p-5 ">
           <div className="row">
-            <div className="col-md-3">
-              <img className={`${styles.mainLogo}`} src={logo} alt="logo" />
-              <p className={`${styles.information}`}>seuemail@gmail.com</p>
-              <p className={`${styles.information}`}>21 96906-8241</p>
-              <p className=" mt-4">
-                <a>
-                  <FontAwesomeIcon
-                    icon={faWhatsapp}
-                    style={{ color: '#949fb5', marginLeft: '.5rem' }}
-                    size="xl"
-                  />
-                </a>
-
-                <a>
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    style={{ color: '#949fb5', marginLeft: '.5rem' }}
-                    size="xl"
-                  />
-                </a>
-                <a>
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    style={{ color: '#949fb5', marginLeft: '.5rem' }}
-                    size="xl"
-                  />
-                </a>
-              </p>
+            <div className="col-md-3  mt-5">
+              <h4 className={styles.subtitle}>Patrocinadores</h4>
             </div>
             <div className="col-md-3 mt-5">
               <h4 className={styles.subtitle}>Navegação</h4>
@@ -60,18 +26,7 @@ const Footer = () => {
 
               <p className={styles.information}>
                 <a href="#values" className="nav-link">
-                  Nosso Valores
-                </a>
-              </p>
-
-              <p className={styles.information}>
-                <a href="#trainers" className="nav-link">
-                  Nosso Time
-                </a>
-              </p>
-              <p className={styles.information}>
-                <a href="#trips" className="nav-link">
-                  Trips
+                  Nossos Valores
                 </a>
               </p>
             </div>

@@ -9,9 +9,9 @@ const Surf = () => {
       </div>
       <div className="d-flex justify-content-center">
         <p className={styles.description}>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal
+          Utilizamos como metodologia: aulas ,eventos e viagens, além de
+          promovermos inclusão social, consciência ecológica e saúde em um
+          ambiente multidisciplinar, agradável e acolhedor.
         </p>
       </div>
       <div className="d-flex justify-content-center">

@@ -2,6 +2,12 @@ import React from 'react';
 import logo from '../imgs/logo_centro.png';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+
 // eslint-disable-next-line react/prop-types
 const Header = ({ formHeader }) => {
   // muda a cor do Header ao dar scroll
@@ -90,7 +96,7 @@ const Header = ({ formHeader }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               {formHeader ? (
                 <Link className="nav-link" aria-current="page" to="/">
@@ -124,7 +130,7 @@ const Header = ({ formHeader }) => {
                 </a>
               )}
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               {formHeader ? (
                 <Link className="nav-link" aria-current="page" to="/">
                   Nosso time
@@ -134,8 +140,8 @@ const Header = ({ formHeader }) => {
                   Nosso time
                 </a>
               )}
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               {formHeader ? (
                 <Link className="nav-link" aria-current="page" to="/">
                   Trips
@@ -145,7 +151,7 @@ const Header = ({ formHeader }) => {
                   Trips
                 </a>
               )}
-            </li>
+            </li> */}
           </ul>
           <ul className="nav-navbar me-auto mt-3">
             <li className="nav-item">
@@ -154,6 +160,48 @@ const Header = ({ formHeader }) => {
                   Pré-Matrícula
                 </button>
               </Link>
+            </li>
+          </ul>
+
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a
+                href="https://api.whatsapp.com/send?phone=+5521981454674&text=Aloha! Vim do site e gostaria de obter algumas informações."
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faWhatsapp}
+                  style={{ color: '#40c351' }}
+                  size="xl"
+                />
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="https://www.instagram.com/escoladesurf_ray/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  style={{ color: '#fd2167' }}
+                  size="xl"
+                />
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="https://www.facebook.com/escoladesurfrs"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  style={{ color: '#0866ff' }}
+                  size="xl"
+                />
+              </a>
             </li>
           </ul>
         </div>

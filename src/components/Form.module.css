@@ -20,3 +20,17 @@
   font-weight: 700;
   font-size: 2vh;
 }
+.errors {
+  font-family: 'Urbanist';
+  font-weight: 400;
+  color: red;
+}
+.termo {
+  font-family: 'Urbanist';
+  font-weight: 600;
+  color: #00adef;
+  text-decoration: none;
+}
+.termo:hover {
+  cursor: pointer;
+}

@@ -76,7 +76,7 @@ const Trips = () => {
               className={styles.buyLink}
               target="_blank"
               rel="noreferrer"
-              href={`https://api.whatsapp.com/send?phone=+5521969068241&text=Estou%20Interessado%20na%20Trip%20Lorem%20Ipsum%20Dolor`}
+              href={`https://api.whatsapp.com/send?phone=+5521981454674&text=Estou%20Interessado%20na%20Trip%20Lorem%20Ipsum%20Dolor`}
             >
               <button className={styles.signUpButton}>Compre Agora!</button>
             </a>
