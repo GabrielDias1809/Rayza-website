@@ -123,7 +123,6 @@ const Form = () => {
       console.log(error);
     }
     console.log(data);
-    window.location.reload();
   };
   return (
     <>
