@@ -1,10 +1,11 @@
 import styles from './Form.module.css';
+import { format } from 'date-fns';
 import 'react-datepicker/dist/react-datepicker.css';
 import Header from './Header';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
+import { useState } from 'react';
 function validarCPF(cpf) {
   // Função para validar os dígitos verificadores do CPF
   function validarDigitos(cpf) {
@@ -83,6 +84,8 @@ const schema = yup.object({
 });
 
 const Form = () => {
+  const [CPF, setCPF] = useState(false);
+  const [EMAIL, setEMAIL] = useState(false);
   const {
     register,
     handleSubmit,
@@ -91,10 +94,37 @@ const Form = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    const dataFormatada = format(new Date(data.nascimento), 'dd/MM/yyyy');
+    const postEndpoint =
+      'https://rayzasilveira.websitesa.com.br/aluno/matricula';
+
+    const token = 'qSMW4zLYKw7SPr-6vL_BNb_u9OGLgHoG';
+
+    try {
+      const response = await fetch(postEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ ...data, nascimento: dataFormatada }),
+      });
+      const responseData = await response.json();
+      console.log(responseData);
+      if (responseData[0].field || responseData[1].field === 'email') {
+        setEMAIL(!EMAIL);
+        return;
+      } else if (responseData[0].field || responseData[1].field === 'cpf') {
+        setCPF(!CPF);
+      }
+    } catch (error) {
+      console.error('Erro ao fazer chamada de API:', error);
+      console.log(error);
+    }
     console.log(data);
+    window.location.reload();
   };
-  console.log(errors.nome?.message);
   return (
     <>
       <Header formHeader={true} />
@@ -134,13 +164,16 @@ const Form = () => {
                   <input
                     type="email"
                     className={`form-control ${
-                      errors.email ? 'is-invalid' : ''
+                      errors.email || EMAIL ? 'is-invalid' : ''
                     }`}
                     id="email"
                     required
                     {...register('email')}
                   />
                   <span className={styles.errors}>{errors.email?.message}</span>
+                  <span className={styles.errors}>
+                    {EMAIL ? 'Email já está em uso' : ''}
+                  </span>
                 </div>
               </div>
               <div className="col-sm-4">
@@ -173,12 +206,17 @@ const Form = () => {
                   </label>
                   <input
                     type="text"
-                    className={`form-control ${errors.cpf ? 'is-invalid' : ''}`}
+                    className={`form-control ${
+                      errors.cpf || CPF ? 'is-invalid' : ''
+                    }`}
                     id="cpf"
                     required
                     {...register('cpf')}
                   />
                   <span className={styles.errors}>{errors.cpf?.message}</span>
+                  <span className={styles.errors}>
+                    {CPF ? 'CPF já está em uso' : ''}
+                  </span>
                 </div>
               </div>
               <div className="col-sm-4">
