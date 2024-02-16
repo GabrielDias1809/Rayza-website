@@ -86,9 +86,11 @@ const schema = yup.object({
 const Form = () => {
   const [CPF, setCPF] = useState(false);
   const [EMAIL, setEMAIL] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -112,11 +114,23 @@ const Form = () => {
       });
       const responseData = await response.json();
       console.log(responseData);
-      if (responseData[0].field || responseData[1].field === 'email') {
-        setEMAIL(!EMAIL);
-        return;
-      } else if (responseData[0].field || responseData[1].field === 'cpf') {
-        setCPF(!CPF);
+
+      if (responseData.status === 'Novo') {
+        reset();
+        setShowSuccessMessage(true);
+      }
+
+      setCPF(false); // Reset CPF state
+      setEMAIL(false); // Reset EMAIL state
+
+      if (Array.isArray(responseData)) {
+        responseData.forEach(({ field }) => {
+          if (field === 'email') {
+            setEMAIL(true);
+          } else if (field === 'cpf') {
+            setCPF(true);
+          }
+        });
       }
     } catch (error) {
       console.error('Erro ao fazer chamada de API:', error);
@@ -124,10 +138,54 @@ const Form = () => {
     }
     console.log(data);
   };
+
   return (
     <>
       <Header formHeader={true} />
       <section className={styles.section}>
+        <div
+          className="modal fade"
+          id="exampleModal"
+          tabIndex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModalLabel">
+                  Pré-Matrícula feita com sucesso!
+                </h1>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                Pré-Matrícula realizada com sucesso! Acesse o{' '}
+                <a
+                  href="https://api.whatsapp.com/send?phone=+5521981454674&text=Aloha! Vim do site e gostaria de obter algumas informações."
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WhatsApp
+                </a>{' '}
+                para dar continuidade a sua matrícula.
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-success"
+                  data-bs-dismiss="modal"
+                >
+                  Entendi
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="container mt-5">
           <form className="mt-5 mb-5" onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
@@ -169,10 +227,11 @@ const Form = () => {
                     required
                     {...register('email')}
                   />
-                  <span className={styles.errors}>{errors.email?.message}</span>
                   <span className={styles.errors}>
-                    {EMAIL ? 'Email já está em uso' : ''}
+                    {errors.email?.message ||
+                      (EMAIL ? 'Email já está em uso' : '')}
                   </span>
+                  <span className={styles.errors}>{errors.email?.message}</span>
                 </div>
               </div>
               <div className="col-sm-4">
@@ -212,10 +271,10 @@ const Form = () => {
                     required
                     {...register('cpf')}
                   />
-                  <span className={styles.errors}>{errors.cpf?.message}</span>
                   <span className={styles.errors}>
-                    {CPF ? 'CPF já está em uso' : ''}
+                    {errors.cpf?.message || (CPF ? 'CPF já está em uso' : '')}
                   </span>
+                  <span className={styles.errors}>{errors.cpf?.message}</span>
                 </div>
               </div>
               <div className="col-sm-4">
@@ -425,7 +484,8 @@ const Form = () => {
 
               <button
                 className={styles.buttonForm}
-                onClick={() => handleSubmit(onSubmit)()}
+                data-bs-toggle={showSuccessMessage ? 'modal' : ''}
+                data-bs-target={showSuccessMessage ? '#exampleModal' : ''}
               >
                 Enviar inscrição
               </button>

@@ -1,5 +1,5 @@
 .section {
-  background-image: url('../imgs/homeBanner.webp');
+  background-image: url('../imgs/background.webp');
   background-size: cover; /* Ajusta o tamanho da imagem para cobrir completamente a seção */
   background-repeat: no-repeat; /* Evita a repetição da imagem */
   background-position: center; /* Centraliza a imagem na seção */

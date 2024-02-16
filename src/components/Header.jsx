@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../imgs/logo_centro.png';
+import logo2 from '../imgs/logo.png';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -41,7 +42,7 @@ const Header = ({ formHeader }) => {
     const href = event.currentTarget.getAttribute('href');
     const section = document.querySelector(href);
 
-    const topo = section.offsetTop - 100;
+    const topo = section.offsetTop - 150;
     window.scrollTo({
       top: topo,
       behavior: 'smooth',
@@ -79,7 +80,15 @@ const Header = ({ formHeader }) => {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#home">
-          <img className={`${styles.mainLogo} ms-5`} src={logo} alt="logo" />
+          {fixed || menu ? (
+            <img className={`${styles.mainLogo} ms-5`} src={logo} alt="logo" />
+          ) : (
+            <img
+              className={`${styles.secondLogo} ms-5`}
+              src={logo2}
+              alt="logo"
+            />
+          )}
         </a>
         <button
           className="navbar-toggler"
@@ -130,28 +139,6 @@ const Header = ({ formHeader }) => {
                 </a>
               )}
             </li>
-            {/* <li className="nav-item">
-              {formHeader ? (
-                <Link className="nav-link" aria-current="page" to="/">
-                  Nosso time
-                </Link>
-              ) : (
-                <a className="nav-link" aria-current="page" href="#trainers">
-                  Nosso time
-                </a>
-              )}
-            </li> */}
-            {/* <li className="nav-item">
-              {formHeader ? (
-                <Link className="nav-link" aria-current="page" to="/">
-                  Trips
-                </Link>
-              ) : (
-                <a className="nav-link" aria-current="page" href="#trips">
-                  Trips
-                </a>
-              )}
-            </li> */}
           </ul>
           <ul className="nav-navbar me-auto mt-3">
             <li className="nav-item">
@@ -169,6 +156,7 @@ const Header = ({ formHeader }) => {
                 href="https://api.whatsapp.com/send?phone=+5521981454674&text=Aloha! Vim do site e gostaria de obter algumas informações."
                 target="_blank"
                 rel="noreferrer"
+                className="text-decoration-none"
               >
                 <FontAwesomeIcon
                   icon={faWhatsapp}

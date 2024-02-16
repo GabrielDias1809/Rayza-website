@@ -33,6 +33,12 @@
 .mainLogo {
   width: 100%;
   max-width: 13dvh; /* Defina o tamanho máximo conforme necessário */
+  transition: 0.5s;
+}
+.secondLogo {
+  width: 100%;
+  max-width: 29dvh;
+  transition: 0.5s;
 }
 .svg {
   width: 100%;
@@ -44,11 +50,25 @@
   font-weight: 600;
   background-color: #00adef;
   color: #fff;
-  border-style: none;
+  border: none;
   border-radius: 6px;
   width: 8.1rem;
   height: 2.5rem;
   margin-right: 2rem;
+  transition: 0.3s;
+}
+.signupButton:hover {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #fff;
+  color: #00adef;
+  border: 3px solid #00adef;
+  border-radius: 6px;
+  width: 8.1rem;
+  height: 2.5rem;
+  margin-right: 2rem;
+  transition: 0.3s;
 }
 .studentArea {
   border: 1px solid #fb4a8d !important;

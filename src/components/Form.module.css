@@ -1,5 +1,6 @@
 .section {
-  margin-top: 20vh;
+  margin-top: 25vh;
+  z-index: 0;
 }
 .label {
   font-family: Urbanist, sans-serif;
@@ -33,4 +34,30 @@
 }
 .termo:hover {
   cursor: pointer;
+}
+.alerta {
+  font-family: 'Urbanist' !important;
+  font-weight: 600 !important;
+  border: none;
+  display: none !important;
+  z-index: 1;
+}
+.alertaVisible {
+  font-family: 'Urbanist' !important;
+  font-weight: 600 !important;
+  border: none;
+  display: flex;
+  animation-name: slide;
+  animation-duration: 1s;
+  transition: 0.5;
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-100);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

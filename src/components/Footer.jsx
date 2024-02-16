@@ -1,4 +1,5 @@
 import styles from './Footer.module.css';
+import logo from '../imgs/logo-romildo.png';
 
 const Footer = () => {
   return (
@@ -6,8 +7,9 @@ const Footer = () => {
       <section className={styles.section}>
         <div className="container p-5 ">
           <div className="row">
-            <div className="col-md-3  mt-5">
+            <div className="col-md-3 mt-5">
               <h4 className={styles.subtitle}>Patrocinadores</h4>
+              <img src={logo} alt="" className={styles.logo} />
             </div>
             <div className="col-md-3 mt-5">
               <h4 className={styles.subtitle}>Navegação</h4>

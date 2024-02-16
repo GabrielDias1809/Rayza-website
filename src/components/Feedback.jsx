@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import styles from './Feedback.module.css';
-import imgMale from '../imgs/imagem.webp';
-import imgFemale from '../imgs/imagem-w.webp';
+import imgMale from '../imgs/homem.jpg';
+import imgFemale from '../imgs/mulher.jpg';
 import Stars from './Stars';
 
 const Feedback = ({ src, name, feedback, stars }) => {
